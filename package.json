@@ -1,0 +1,16 @@
+{
+  "name": "devenv",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "concurrently  \"cd ./packages/server && yarn start \" \"cd ./packages/client && yarn start\" ",
+    "build": "concurrently  \"cd ./packages/server && yarn build \"  \"cd ./packages/client && yarn build\" "
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
